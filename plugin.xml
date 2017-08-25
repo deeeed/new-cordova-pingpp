@@ -12,13 +12,13 @@
     <engines>
         <engine name="cordova" version=">=5.4.1"/>
     </engines>
-    
+
     <js-module src="www/pingpp.js" name="pingpp">
         <clobbers target="Pingpp" />
     </js-module>
 
     <platform name="android">
-    
+
         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="PingppPlugin">
                 <param name="android-package" value="cordova.plugin.pingpp.PingppPlugin"/>
@@ -70,12 +70,11 @@
 
         <source-file src="src/android/PingppPlugin.java" target-dir="src/cordova/plugin/pingpp/"/>
         <source-file src="sdk/android/lib/pingpp/libs/alipaySingle-20170510.jar" target-dir="libs"/>
-        <source-file src="sdk/android/lib/pingpp/libs/libammsdk.jar" target-dir="libs"/>
+        <!-- <source-file src="sdk/android/lib/pingpp/libs/libammsdk.jar" target-dir="libs"/>-->
         <source-file src="sdk/android/lib/pingpp/libs/libpingpp-2.1.11.jar" target-dir="libs"/>
-        <source-file src="sdk/android/lib/pingpp/libs/UPPayAssistEx.jar" target-dir="libs"/>   
+        <source-file src="sdk/android/lib/pingpp/libs/UPPayAssistEx.jar" target-dir="libs"/>
         <source-file src="sdk/android/lib/pingpp/libs/UPPayPluginExPro.jar" target-dir="libs"/>
         <source-file src="sdk/android/lib/pingpp/libs/mqqopenpay.jar" target-dir="libs"/>
-        
         <source-file src="sdk/android/lib/pingpp/libs/armeabi/libentryexpro.so" target-dir="libs/armeabi"/>
         <source-file src="sdk/android/lib/pingpp/libs/armeabi/libuptsmaddon.so" target-dir="libs/armeabi"/>
         <source-file src="sdk/android/lib/pingpp/libs/armeabi/libpingpp.so" target-dir="libs/armeabi"/>
@@ -93,17 +92,17 @@
 		<source-file src="sdk/android/lib/pingpp/libs/x86_64/libuptsmaddon.so" target-dir="libs/x86_64"/>
 		<source-file src="sdk/android/lib/pingpp/libs/x86_64/libentryexpro.so" target-dir="libs/x86_64"/>
 		<source-file src="sdk/android/lib/pingpp/libs/x86_64/libpingpp.so" target-dir="libs/x86_64"/>
-		
+
 		<source-file src="sdk/android/lib/pingpp/libs/data.bin" target-dir="assets"/>
-		<source-file src="sdk/android/lib/pingpp/libs/pingpp_web.html" target-dir="assets"/>		
-		
+		<source-file src="sdk/android/lib/pingpp/libs/pingpp_web.html" target-dir="assets"/>
+
 		<source-file src="sdk/android/lib/pingpp/res/drawable/pingpp_back.png" target-dir="res/drawable"/>
 		<source-file src="sdk/android/lib/pingpp/res/drawable/tips_bg.9.png" target-dir="res/drawable"/>
-		
+
 		<source-file src="sdk/android/lib/pingpp/res/layout/activity_pingpp_payment.xml" target-dir="res/layout"/>
-		
+
 		<source-file src="sdk/android/lib/pingpp/res/values/colors.xml" target-dir="res/values"/>
-		
+
     </platform>
 
     <platform name="ios">
