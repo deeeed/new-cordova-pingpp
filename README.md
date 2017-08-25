@@ -5,7 +5,6 @@ I just removed a dependency "libammsdk" which is already installed from my wecha
 -- Comment line in plugin.xml:
 `
 <!-- <source-file src="sdk/android/lib/pingpp/libs/libammsdk.jar" target-dir="libs"/> -->
-`
 
 Here is the original documentation
 

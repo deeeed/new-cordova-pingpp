@@ -10,7 +10,7 @@
         object = [[command arguments] objectAtIndex:0];
         NSString* URLScheme = [self getURLScheme];
         UIViewController * __weak weakSelf = self.viewController;
-        
+
         dispatch_async(dispatch_get_main_queue(), ^{
             [Pingpp createPayment:object viewController:weakSelf
                      appURLScheme: URLScheme
@@ -28,7 +28,7 @@
     }else{
         NSLog(@"关闭 Ping++ Dubug Mode");
     }
-    
+
 }
 #pragma mark - 获取当前 SDK 版本号
 - (void) getVersion:(CDVInvokedUrlCommand*)command{
@@ -39,7 +39,7 @@
     NSLog(@"当前 Ping++ SDK 版本号为: %@",version);
     [self.commandDelegate sendPluginResult:pluginResult callbackId:self.myCallbackId];
 }
-    
+
 - (void)handleOpenURL:(NSNotification*)notification
     {
         NSURL* url = [notification object];
@@ -51,7 +51,7 @@
             [self callbackResult:result error:error];
         }];
     }
-    
+
 - (void) callbackResult:(NSString*)result error:(PingppError*) error
     {
         CDVPluginResult* pluginResult = nil;
@@ -63,20 +63,20 @@
         [self.commandDelegate sendPluginResult:pluginResult callbackId:self.myCallbackId];
     }
 -(NSString *)getURLScheme{
-    
+
     NSArray *urlSchemeList = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleURLTypes"];
     if ([urlSchemeList count] == 0) {
-        NSLog(@"URL Scheme 为空，请在 plugin.xml 添加。");
+        NSLog(@"URL Scheme 'CFBundleURLTypes' 为空，请在 plugin.xml 添加。");
         return nil;
     }
     NSDictionary *urlSchemeType = [urlSchemeList objectAtIndex:0];
     NSArray *schemes = [urlSchemeType objectForKey:@"CFBundleURLSchemes"];
     if ([schemes count] == 0) {
-        NSLog(@"URL Scheme 为空，请在 plugin.xml 添加。");
+        NSLog(@"URL Scheme 'CFBundleURLSchemes' 为空，请在 plugin.xml 添加。");
         return nil;
     }
     NSString *scheme = [schemes objectAtIndex:0];
     return scheme;
 }
-    
+
     @end
