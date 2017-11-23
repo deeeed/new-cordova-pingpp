@@ -106,7 +106,6 @@
     </platform>
 
     <!-- Disable pingpp on IOS  -->
-    <!--
     <platform name="ios">
         <framework src="CFNetwork.framework" />
         <framework src="SystemConfiguration.framework" />
@@ -120,18 +119,18 @@
         <framework src="libsqlite3.0.tbd" />
         <framework src="libstdc++.tbd" />
 
-        <resource-file src="sdk/ios/lib/Channels/Alipay/AlipaySDK.bundle"/>
+        <!-- <resource-file src="sdk/ios/lib/Channels/Alipay/AlipaySDK.bundle"/>
         <framework src="sdk/ios/lib/Channels/Alipay/AlipaySDK.framework" custom="true"/>
         <source-file src="sdk/ios/lib/Channels/Alipay/libpingpp+alipay.a" framework="true"/>
         <source-file src="sdk/ios/lib/Channels/UnionPay/libPaymentControl.a" framework="true"/>
-        <source-file src="sdk/ios/lib/Channels/UnionPay/libpingpp+up.a" framework="true"/>
+        <source-file src="sdk/ios/lib/Channels/UnionPay/libpingpp+up.a" framework="true"/> -->
         <resource-file src="sdk/ios/lib/Pingpp.bundle"/>
         <source-file src="sdk/ios/lib/libpingppcore.a" framework="true"/>
         <header-file src="sdk/ios/lib/Pingpp.h"/>
         <source-file src="sdk/ios/lib/Dependencies/Network/libpingpp+network.a" framework="true"/>
         <header-file src="sdk/ios/lib/Dependencies/Network/PingppURLResponse.h"/>
-        <header-file src="src/ios/PingppPlugin.h" target-dir="PingppPlugin"/>
-        <source-file src="src/ios/PingppPlugin.m" target-dir="PingppPlugin"/>
+        <!-- <header-file src="src/ios/PingppPlugin.h" target-dir="PingppPlugin"/> -->
+        <!-- <source-file src="src/ios/PingppPlugin.m" target-dir="PingppPlugin"/> -->
 
         <config-file target="config.xml" parent="/widget">
             <feature name="PingppPlugin">
@@ -160,6 +159,6 @@
             </array>
         </config-file>
     </platform>
-    -->
+
     <hook type="before_plugin_install" src="scripts/clone_pingpp_sdk.js" />
 </plugin>
