@@ -118,7 +118,8 @@
         <framework src="libsqlite3.0.tbd" />
         <framework src="libstdc++.tbd" />
 
-        <resource-file src="sdk/ios/lib/Channels/Alipay/AlipaySDK.bundle"/>
+        <!-- Disable pingpp on IOS  -->
+        <!-- <resource-file src="sdk/ios/lib/Channels/Alipay/AlipaySDK.bundle"/>
         <framework src="sdk/ios/lib/Channels/Alipay/AlipaySDK.framework" custom="true"/>
         <source-file src="sdk/ios/lib/Channels/Alipay/libpingpp+alipay.a" framework="true"/>
         <source-file src="sdk/ios/lib/Channels/UnionPay/libPaymentControl.a" framework="true"/>
@@ -152,12 +153,11 @@
                     <string>Editor</string>
                     <key>CFBundleURLSchemes</key>
                     <array>
-                        <!-- 填写URL-SCHEME -->
                         <string>$pingpp_url_scheme</string>
                     </array>
                 </dict>
             </array>
-        </config-file>
+        </config-file> -->
 
     </platform>
 
