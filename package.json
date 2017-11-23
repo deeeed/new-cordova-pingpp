@@ -5,8 +5,7 @@
   "cordova": {
     "id": "cordova-plugin-pingpp",
     "platforms": [
-      "android",
-      "ios"
+      "android"
     ]
   },
   "repository": {

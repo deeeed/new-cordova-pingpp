@@ -139,6 +139,7 @@
             <preference name="pingpp_url_scheme" value="$pingpp_url_scheme" />
         </config-file>
 
+        <!--
         <config-file target="*-Info.plist" parent="LSApplicationQueriesSchemes">
             <array>
                 <string>weixin</string>
@@ -158,6 +159,7 @@
                 </dict>
             </array>
         </config-file>
+          -->
     </platform>
 
     <hook type="before_plugin_install" src="scripts/clone_pingpp_sdk.js" />
